@@ -15,6 +15,8 @@ RUN apk add --update --no-cache \
     && rm -rf /tmp/* /var/tmp/* \
     && echo 'gem: --no-document' > /etc/gemrc
 
+RUN gem install fastlane
+
 RUN eval $(ssh-agent -s)
 
 RUN export LC_ALL=en_US.UTF-8 \
